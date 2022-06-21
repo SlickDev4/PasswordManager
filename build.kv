@@ -1,0 +1,63 @@
+<AccountLabel@Label>:
+    size_hint: (0.1, 0.05)
+    text_size: self.size
+    valign: 'middle'
+    halign: 'center'
+    background_color: (0,1,0,1)
+    color:(0,0,0,1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<DataLabel@Label>:
+    font_size: 16
+    size_hint_y: None
+    text_size: self.size
+    size: dp(100), dp(60)
+    height: self.size[1]
+    valign: 'middle'
+    halign: 'center'
+    background_color: (1,1,1,1)
+    color:(0,0,0,1)
+    canvas.before:
+        Color:
+            rgba: self.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<EditDeleteButtons@Button>:
+    font_size: 20
+    size_hint_y: None
+    text_size: self.size
+    size: dp(100), dp(60)
+    height: self.size[1]
+    valign: 'middle'
+    halign: 'center'
+
+<AccountTextInput@TextInput>:
+    size_hint: (0.4, 0.05)
+    multiline: False
+    write_tab: False
+
+<LoginButtons@Button>:
+    size_hint:(0.2, 0.05)
+
+<Manager>:
+    LogInPage:
+    NewAccountPage:
+    MainPage:
+
+<MainPage>:
+    Button:
+        text: "logout"
+        size_hint: (0.2, 0.05)
+        pos_hint: {"x": 0.4, "y": 0.02}
+        on_press: root.test()
+
+
+
+
